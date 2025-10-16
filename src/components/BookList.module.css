@@ -1,0 +1,21 @@
+.bookListContainer {
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+  min-height: 70vh;
+}
+
+.bookListContainer p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.alert {
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .bookListContainer {
+    padding: 1rem;
+  }
+}

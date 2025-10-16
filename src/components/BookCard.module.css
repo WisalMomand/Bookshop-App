@@ -1,0 +1,90 @@
+.card {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 100%;
+  height: 450px; /* 🔹 FIXED consistent card height */
+  max-width: 300px; /* 🔹 FIXED consistent card width */
+  margin: 0 auto;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  border-color: #007bff;
+}
+
+.imageWrapper {
+  width: 100%;
+  height: 280px; /* 🔹 Uniform image area */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f9fa;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .image {
+  transform: scale(1.1);
+}
+
+.cardBody {
+  padding: 1rem;
+  text-align: left;
+  flex-grow: 1;
+}
+
+.title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #212529;
+  margin-bottom: 0.5rem;
+  min-height: 48px; /* Keeps all titles aligned */
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.author,
+.year {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0.3rem 0;
+  line-height: 1.4;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* 🔹 Grid Consistency */
+@media (min-width: 768px) {
+  .card {
+    height: 450px;
+    max-width: 300px;
+  }
+
+  .imageWrapper {
+    height: 280px;
+  }
+}
+
+/* 🔹 Responsive Fix for Small Screens */
+@media (max-width: 576px) {
+  .card {
+    height: 400px;
+    max-width: 100%;
+  }
+}
